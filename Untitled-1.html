@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title><h2>javatuto</h2></title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <div id="firstContainer" class="container">
+      <button id="Click">On Click</button>
+      <h1>hello</h1>
+    </div>
+    <div id="container">
+      <h6>Hello World</h6>
+    </div>
+    <script>
+      console.log("Hello World");
+      console.log("Hello World ", 4 + 6, "anotherHello");
+      // alert("Hello World");
+      console.warn("Hello World");
+      console.error("Hello World");
+      document.write("Hello World");
+
+      //methods of array
+      const ages = [23, 25, 33, 12];
+      function checkAdults(ages) {
+        return ages >= 18;
+      }
+
+      const ages1 = ages.filter(checkAdults);
+      console.log(ages1, "checkAdults");
+
+      const age = [56, 33, 80, 75];
+      function checkOlder(age) {
+        return age >= 60;
+      }
+      const age2 = age.filter(checkOlder);
+      console.log(age2, "checkOlder");
+
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      fruits.unshift("Lemon");
+      console.log(fruits, "unshift");
+
+      const arr1 = [1, 2, `Hello`];
+      const arr2 = [3, 4];
+      const arr3 = arr1.concat(arr2);
+      console.log(arr3, "concat");
+
+      const arr4 = [
+        [90, 34],
+        [5, 6],
+      ];
+      const arr5 = arr4.flat();
+      console.log(arr5, "flat");
+
+      const bank = ["sbi", "icici", "axis"];
+      bank.splice(2, 0, "hdfc");
+      console.log(bank, "splice");
+
+      const colour = ["black", "white", "green", "yellow"];
+      const colour1 = colour.slice(0, 2);
+      console.log(colour1, "slice");
+
+      //sorting
+
+      // const array=[5,6,8,9,1]
+      // function sort (a,b) {
+      //     return a-b;
+      // }
+      // const array1=array.sort(sort)
+      // console.log(array1,"sort")
+
+      // const array2=[243,55,100,500,2]
+      // array2.sort();
+      // console.log(array2,"sort2")
+
+      //string methos of array
+
+      let str = "this is a string";
+      // console.log(str.length)
+      // console.log(str.indexOf("a"))
+      // console.log(str.lastIndexOf("i"))
+      // console.log(str.slice(0,1))
+
+    //   d = str.replace("this", "abc");
+    //   console.log(d, str);
+      myDate = new Date()
+      console.log(myDate);
+    </script>
+  </body>
+</html>
