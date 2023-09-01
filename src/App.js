@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import axios from "./axios";
-
+import DigitalClock from "./Component/DigitalClock";
 
 function App() {
   const [mydata, setMydata] = useState([]);
@@ -35,14 +35,11 @@ function App() {
 
   const putApi = async (id) => {
     try {
-      const update = await axios.put(
-        `/posts/2`,
-        {
-          userId: 9,
-          title: "abc",
-          body: "xyz",
-        }
-      );
+      const update = await axios.put(`/posts/2`, {
+        userId: 9,
+        title: "abc",
+        body: "xyz",
+      });
       console.warn(update);
       console.log(id);
     } catch (error) {
@@ -52,9 +49,7 @@ function App() {
 
   const deleteApi = async (id) => {
     try {
-      const resp1 = await axios.delete(
-        `/posts/${id}`
-      );
+      const resp1 = await axios.delete(`/posts/${id}`);
       console.warn(resp1);
       console.log(id);
     } catch (error) {
@@ -93,15 +88,17 @@ function App() {
                 <td>{item.title}</td>
                 <td>{item.body}</td>
                 <td>
-                <button onClick={()=>putApi(item.id)}>update</button>  
-                <button onClick={() => deleteApi(item.id)}>delete</button>
-
+                  <button onClick={() => putApi(item.id)}>update</button>
+                  <button onClick={() => deleteApi(item.id)}>delete</button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      <>
+              <DigitalClock/>
+      </>
     </div>
   );
 }
